@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TyCo Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f0f8ff, #e6e6fa);
+            color: #333;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: slideIn 1.5s ease-out;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .link-item {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: bounceIn 2s ease-out;
+        }
+        .link-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .link-item h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .link-item a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .link-item a:hover {
+            color: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to TyCo Innovations</h1>
+        <p>All good things start somewhere! Explore our projects below.</p>
+        <div class="links">
+            <div class="link-item">
+                <h2>Gen AI</h2>
+                <a href="https://tycoinnovations.github.io/gen-ai/">Visit Gen AI</a>
+            </div>
+            <div class="link-item">
+                <h2>Prophet</h2>
+                <a href="https://tycoinnovations.github.io/prophet/">Visit Prophet</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
