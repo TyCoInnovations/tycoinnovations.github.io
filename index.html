@@ -3,92 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TyCo</title>
+    <title>Your Website Title</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #f0f8ff, #e6e6fa);
-            color: #333;
-            text-align: center;
-            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #00bfff, #32cd32);
+            color: #ffffff;
         }
         .container {
-            max-width: 800px;
-            margin: 100px auto;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            animation: fadeIn 2s ease-in-out;
         }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            animation: slideIn 1.5s ease-out;
-        }
-        p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            animation: fadeIn 2.5s ease-in-out;
-        }
-        .links {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-        .link-item {
-            background: #fff;
+        .card {
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            animation: bounceIn 2s ease-out;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        .link-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        h1, h2 {
+            color: #fff;
         }
-        .link-item h2 {
-            margin: 0;
-            font-size: 1.5em;
+        button {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        .link-item a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-        .link-item a:hover {
-            color: #0056b3;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @keyframes bounceIn {
-            0% { transform: scale(0.3); opacity: 0; }
-            50% { transform: scale(1.05); }
-            70% { transform: scale(0.9); }
-            100% { transform: scale(1); opacity: 1; }
+        img {
+            height: 40px;
+            margin-right: 15px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to TyCo Home</h1>
-        <p>Innovations no one else dares to make.</p>
-        <div class="links">
-            <div class="link-item">
-                <h2>Gen AI</h2>
-                <a href="https://tycoinnovations.github.io/gen-ai/">Visit Gen AI</a>
+        <header>
+            <h1>Welcome to Our Projects</h1>
+        </header>
+        <div class="card">
+            <img src="image2_url" alt="Gen AI logo">
+            <div>
+                <h2>Gen AI Project</h2>
+                <p>Project description here...</p>
             </div>
-            <div class="link-item">
-                <h2>Prophet</h2>
-                <a href="https://tycoinnovations.github.io/prophet/">Visit Prophet</a>
+            <button>Learn More</button>
+        </div>
+        <div class="card">
+            <img src="image1_url" alt="Prophet logo">
+            <div>
+                <h2>Prophet Project</h2>
+                <p>Project description here...</p>
             </div>
+            <button>Learn More</button>
         </div>
     </div>
 </body>
