@@ -113,6 +113,29 @@ hr {
     background: rgba(255,255,255,0.2);
 }
 
+/* Back button styles */
+.back-button {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.15);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-1px);
+}
+
+.back-button:active {
+    transform: translateY(0);
+}
+
 @media (max-width: 768px) {
     body {
         padding: 20px;
@@ -131,7 +154,9 @@ hr {
 <body>
 
 <div class="container">
-  
+
+    <a id="backButton" class="back-button" href="https://example.com">← Back</a>
+
     <h1>Hey there!</h1>
 
     <p>
@@ -149,6 +174,35 @@ hr {
     </p>
 
 </div>
+
+<script>
+(function () {
+    const defaultBackUrl = '/';
+    const backButton = document.getElementById('backButton');
+
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const backParam = params.get('back');
+
+        if (!backParam) {
+            backButton.href = defaultBackUrl;
+            return;
+        }
+
+        // URLSearchParams already decodes query values.
+        const safeUrl = new URL(backParam);
+
+        // Only allow http/https
+        if (safeUrl.protocol === 'http:' || safeUrl.protocol === 'https:') {
+            backButton.href = safeUrl.href;
+        } else {
+            backButton.href = defaultBackUrl;
+        }
+    } catch (e) {
+        backButton.href = defaultBackUrl;
+    }
+})();
+</script>
 
 </body>
 </html>
